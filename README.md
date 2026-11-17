@@ -2,6 +2,10 @@
 
 English | [中文](README.zh.md)
 
+**Course assignment: SDD workbench**
+
+This fork includes a read-only my-ai-infra SDD workbench plugin. See the [plugin installation and verification guide](plugins/mai-sdd-workbench/README.md) and the [Feature specifications, reviews and acceptance records](mai-specs/999-mai-sdd-workbench/BRIEF.md). Run DSH from source using the instructions below, then install the local `plugins/mai-sdd-workbench` directory from **Plugins → Add plugin**. No model API key is needed for the workbench.
+
 DeepSeek Harness (`dsh`) is an open-source agent harness developed by [DeepSeek AI](https://deepseek.com).
 
 It is built on an **everything-is-a-plugin** architecture and powered by [Cordis](https://github.com/cordiverse/cordis), whose design is described in [_A Programming Paradigm for Spatiotemporal Composability_](https://arxiv.org/abs/2608.25512).

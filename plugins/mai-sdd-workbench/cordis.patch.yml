@@ -1,0 +1,4 @@
+- insert:
+    - id: mai-sdd-workbench
+      name: '@local/mai-sdd-workbench'
+      config: {}

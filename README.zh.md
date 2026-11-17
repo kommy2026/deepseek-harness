@@ -2,6 +2,10 @@
 
 [English](README.md) | 中文
 
+**课程作业：SDD 工作台**
+
+本 Fork 提供只读的 my-ai-infra SDD 工作台插件。请查看[插件安装与验证指南](plugins/mai-sdd-workbench/README.zh.md)和[需求、设计、评审及验收记录](mai-specs/999-mai-sdd-workbench/BRIEF.md)。按下文从源码启动 DSH 后，在“插件 → 添加插件”中安装本地 `plugins/mai-sdd-workbench` 目录。工作台无需模型 API key。
+
 DeepSeek Harness（`dsh`）是由 [DeepSeek AI](https://deepseek.com) 开发的开源 agent harness（智能体框架）。
 
 它构建于**一切皆插件**的架构之上，由 [Cordis](https://github.com/cordiverse/cordis) 驱动，其设计参见论文 [_A Programming Paradigm for Spatiotemporal Composability_](https://arxiv.org/abs/2608.25512)。
