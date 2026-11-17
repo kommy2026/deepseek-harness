@@ -178,4 +178,6 @@
 
 AC-01～AC-06 在 PRD 约定的验证层级内通过；OS 拒绝、目录截断及乱序响应的边界明确如上，不把替身结果当成真实权限或网络测试。截图：[实际作业 Feature](evidence/workbench-own-feature.jpg)、[浅色中文](evidence/workbench-light-zh.jpg)、[深色英文](evidence/workbench-dark-en.jpg)、[窄窗口](evidence/workbench-narrow-dark-en.jpg)。执行者为主 Agent，测试计划由单独的测试规划 Agent 编写；没有外部人工验收签字。
 
-用户允许临时调整主题和语言；测试后已恢复中文、跟随系统和默认窗口尺寸。插件保持启用，服务保留供用户查看。设计 HTML 的 file:// 浏览器预览被工具策略拦截，只完成静态检查，不纳入插件运行成功证据。GitHub 提交与推送不在本次插件验收范围，尚未执行。
+用户允许临时调整主题和语言；测试后已恢复中文、跟随系统和默认窗口尺寸。插件保持启用，服务保留供用户查看。设计 HTML 的 file:// 浏览器预览被工具策略拦截，只完成静态检查，不纳入插件运行成功证据。
+
+插件验收后，用户明确授权公开提交代码、SDD 文档和 4 张截图。已使用 GitHub 匿名邮箱提交到 [作业分支](https://github.com/kommy2026/deepseek-harness/tree/feat/mai-sdd-workbench)，正常执行 pre-commit 与 pre-push；后者的 typecheck 为 5 通过、0 失败，首个代码提交的本地 HEAD 与远程引用一致。Git 交付验证不取代前述业务测试，远程 CI 未作为本记录的通过证据。

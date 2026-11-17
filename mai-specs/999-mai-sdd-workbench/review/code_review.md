@@ -8,7 +8,7 @@
 
 ## 范围与基线
 
-基线为实施前 HEAD（DSH 0.2.2-rc.3）；完整对象 ID 已保存于作业目录的 `.setup/sdd-review-baseline.json`，遵循仓库规则不在维护文档中引用 commit hash。审查 unstaged 变更与全部相关 untracked 文件，staged 为空。范围为 `plugins/mai-sdd-workbench`、本 Feature 规格与 README 入口，以及 my-ai-infra 初始化产生的规则入口、配置和忽略清单。对比对象是该 HEAD 加当前工作区，不是一个已提交的新版本。
+基线为实施前 HEAD（DSH 0.2.2-rc.3）；完整对象 ID 已保存于作业目录的 `.setup/sdd-review-baseline.json`，遵循仓库规则不在维护文档中引用 commit hash。初审时检查 unstaged 变更与全部相关 untracked 文件，staged 为空，尚未创建新提交。范围为 `plugins/mai-sdd-workbench`、本 Feature 规格与 README 入口，以及 my-ai-infra 初始化产生的规则入口、配置和忽略清单。对比对象是该 HEAD 加当时的工作区内容。
 
 沿调用链核对 manifest → DSH 插件管理器 → ModuleLoader → sidebar/main slots → useSessions → workspaceFiles.list/read → RemoteResult → Markdown 元素；生命周期沿 ctx.effect 与 slots 所有者清理核对。没有改 agent loop、会话事件、持久类型、Host 文件权限或官方 packages 源码。根规则迁移到 `.agents/rules/AGENTS.md` 的 SHA256 为 `BA8B444B0022149B29C797B56B2E503614036EE918C7BBD27B28C38309E4A1AA`，与迁移前一致。
 
@@ -48,3 +48,7 @@
 `pnpm run doc-sync` 首轮为 39 通过、4 失败：文档网站构建和 3 个测试被沙箱 symlink EPERM 阻止；新说明存在双语链接/位置与 commit 引用问题。文案修复后全库 pairing 检查 1299 对一致，repository references 通过；宿主 `pnpm run docs:build` 通过，5386 个片段引用可解析；文档网站测试在宿主为 165/166 通过，剩余创建文件符号链接的 `refuses a target whose real path escapes the repository` 用同一断言在管理员进程单独执行通过（1 通过，63 非目标测试跳过）。未修改仓库测试或系统安全设置，未声称首轮 doc-sync 全绿，也未为此重复所有已通过检查。
 
 未执行模型 API、全仓单元测试、全平台矩阵、OS ACL 权限拒绝或真实网络乱序；本版没有新增这些表面的实现。HTML 审阅版的本地文件预览被浏览器策略拦截，只做静态检查，不能声称图表视觉验收完成。工作台只适配标准布局，不声称支持自定义 FEATURE_LAYOUT、编辑、阶段执行或自动监听。没有待验证的必要业务阻塞；后续 Git 提交/推送应使用仓库 pre-push 流程。
+
+## Git 交付复核
+
+用户授权公开提交后，核对并 fetch 真实 Fork master，`change-scope --base origin/master` 确认原始基线一致，实际提交范围为初始化、插件、规格与截图，没有混入工具或临时验收目录。创建 `feat/mai-sdd-workbench` 分支并使用 GitHub 匿名作者邮箱；pre-commit 的双语记录、lint、空白与 vendor guard 全部通过。便携 Git 缺少 bash 命令入口时，确认 sh.exe 是 GNU Bash，再补齐同一二进制入口，没有跳过钩子。正常 pre-push typecheck 的 5 项检查通过，首次 push 后本地与远程引用一致。公开交付位置为 [作业分支](https://github.com/kommy2026/deepseek-harness/tree/feat/mai-sdd-workbench)，不创建面向上游的 PR。

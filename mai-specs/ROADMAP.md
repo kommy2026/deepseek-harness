@@ -14,4 +14,4 @@
 
 | 需求 | 标题 | 规格 | 优先级 | 说明 |
 |---|---|---|---|---|
-| 999 | [my-ai-infra SDD 工作台](999-mai-sdd-workbench/BRIEF.md) | standard | P1 | 只读首版通过 11 项开发测试与真实 DSH 验收；GitHub 提交/推送尚未执行。 |
+| 999 | [my-ai-infra SDD 工作台](999-mai-sdd-workbench/BRIEF.md) | standard | P1 | 只读首版通过 11 项开发测试与真实 DSH 验收；交付分支为 feat/mai-sdd-workbench。 |

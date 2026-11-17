@@ -22,11 +22,12 @@
 - 采用标准规格，保留产品、设计、评审、测试与实际验收记录，满足作业过程要求。
 - 第一版只读，使用 DSH 原生插槽和现有 workspaceFiles API，不修改 agent loop。
 - 有效需求与验收条件唯一维护在 [产品规格](spec/PRD.md)。
-- 本版 AC-01～06 已按约定层级通过；需求、设计、实现、评审、11 项开发测试和真实宿主验收均有记录。仓库文档检查失败项已修复或在所需权限环境复验通过；GitHub 提交与推送尚未执行。
+- 本版 AC-01～06 已按约定层级通过；需求、设计、实现、评审、11 项开发测试和真实宿主验收均有记录。仓库文档检查失败项已修复或在所需权限环境复验通过；代码与过程记录已提交到 [GitHub 作业分支](https://github.com/kommy2026/deepseek-harness/tree/feat/mai-sdd-workbench)。
 
 ## 上下文索引
 
 - [素材索引](context/_INDEX.md)
+- [对照课件的学习与演示步骤](context/LEARNING_GUIDE.md)
 - [产品规格与验收标准](spec/PRD.md)
 - [技术设计](design/TECH_DESIGN.md)
 - [设计评审](review/design_review.md)
